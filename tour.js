@@ -1,17 +1,17 @@
 var dates = [
-  {city: "Baltimore", state: "MD", date: new Date("January 9, 2017"), zip: '21117'},
-  {city: "New Brunswick", state: "NJ", date: new Date("Janaury 10, 2017"), zip: 08901},
-  {city: "Uniondale", state: "NY", date: new Date("January 11, 2017"), zip: 11553},
-  {city: "New York", state: "NY", date: new Date("January 12, 2017"), zip: 10001},
-  {city: "Providence", state: "RI", date: new Date("January 13, 2017"), zip: 02901},
-  {city: "Burlington", state: "VT", date: new Date("January 14, 2017"), zip: 05401},
-  {city: "Easthampton", state: "MA", date: new Date("January 15, 2017"), zip: 01027},
-  {city: "West Haven", state: "CT", date: new Date("January 16, 2017"), zip: 06516},
-  {city: "Brooklyn", state: "NY", date: new Date("January 17, 2017"), zip: 11223},
-  {city: "Philadelphia", state: "PA", date: new Date("January 18, 2017"), zip: 1901},
-  {city: "Richmond", state: "VA", date: new Date("January 19, 2017"), zip: 23218},
-  {city: "Blacksburg", state: "VA", date: new Date("January 20, 2017"), zip: 24060},
-  {city: "College Park", state: "MD", date: new Date("January 21, 2017"), zip: 20740 },
+  {city: "Baltimore", state: "MD", date: new Date("December 28, 2016 "),  woeid: "2358820"},
+  {city: "New Brunswick", state: "NJ", date: new Date("December 29, 2016"), woeid: "2458101"},
+  {city: "Uniondale", state: "NY", date: new Date("December 30, 2016"),  woeid:  "2509941"},
+  {city: "New York", state: "NY", date: new Date("December 31, 2016"), woeid: "2459115"},
+  {city: "Providence", state: "RI", date: new Date("January 1, 2017"),  woeid: "2477058"},
+  {city: "Burlington", state: "VT", date: new Date("January 14, 2017"), woeid: "2372071"},
+  {city: "Easthampton", state: "MA", date: new Date("January 15, 2017"), woeid:"2396432"},
+  {city: "West Haven", state: "CT", date: new Date("January 16, 2017"), woeid:"2517160"},
+  {city: "Brooklyn", state: "NY", date: new Date("January 17, 2017"), woeid:"2459115"},
+  {city: "Philadelphia", state: "PA", date: new Date("January 18, 2017"), woeid:"2471217"},
+  {city: "Richmond", state: "VA", date: new Date("January 19, 2017"), woeid:"2480894"},
+  {city: "Blacksburg", state: "VA", date: new Date("January 20, 2017"), woeid:"2365044"},
+  {city: "College Park", state: "MD", date: new Date("January 21, 2017"), woeid:"2383078"}
 ];
 
 var testDates = [
@@ -21,7 +21,7 @@ var testDates = [
   {city: "New York", state: "NY", date: new Date("December 31, 2016"), zip: '10001', woeid: "2459115"},
   {city: "Providence", state: "RI", date: new Date("January 1, 2017"), zip: '02901', woeid: "2477058"}
 ]
-var TEST = true;
+var TEST = false;
 
 var today = new Date();
 var day = today.getDate();
@@ -36,11 +36,9 @@ else{
   if(year == 2017 && month == 0 && day >= 9 && day <= 17){
     //live update
     startForecast = day - 9; //offset of first day
-
   }
   else{
     startForecast = 8;
-
   }
 }
 
@@ -53,7 +51,8 @@ $(document).ready(function() {
     woeid: dates[startForecast].woeid,
     unit: 'f',
     success: function(weather) {
-      html = '<p>'+formatDate(dates[startForecast].date)+'</p>';
+      html = "<p><strong>Today we are in " + dates[startForecast].city + ", " + dates[startForecast].state + "</strong></p>";
+      html += '<p>'+formatDate(dates[startForecast].date)+'</p>';
       html += '<h2>'+weather.forecast[startForecast].high+'&deg;'+weather.units.temp+'</h2>';
       html += '<ul><li>'+weather.city+', '+weather.region+'</li>';
       html += '<li class="currently">'+weather.forecast[startForecast].text+'</li>';
