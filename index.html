@@ -4,70 +4,71 @@
       <title>Dan Zadorozhnyy</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
       <link rel="stylesheet" href="lib/bootstrap-3.3.7-dist/css/bootstrap.min.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script src="lib/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-      <style>
-         @font-face {
-            font-family: backto;
-            src: url(fonts/back-to-1982/BACKTO1982.TTF);
-         }
-         .navbar-fixed-left {
-         width: 210px;
-         position: fixed;
-         border-radius: 0;
-         height: 100%;
-         }
-         .navbar-brand {
-            height: 80px;
-            color: white;
-            font-family: backto;
-            line-height: 1.5;
-         }
-         .navbar-fixed-left .navbar-nav > li {
-         float: left;  /* Cancel default li float: left */
-         width: 195px;
-         }
-         .navbar-inverse .navbar-nav>.active>a  {
-         background-color: darkslategray;
-         }
-         body {
-         position: relative;
-         }
-         a{
-            color: white;
-         }
-         a:hover{
-            text-decoration: none;
-            color: lightblue;
-         }
-         #section1 {padding-left:230px; padding-top:50px;height:200px;color: #fff; background-color: darkslategray;}
-         #section2 {padding-left:230px; padding-top:50px;height:1200px;color: #fff; background-color: darkslategray;}
-         #section3 {padding-left:230px; padding-top:50px;height:1000px;color: #fff; background-color: darkslategray;}
-      </style>
-      </style>
+      <link rel="stylesheet" href="portfolio-style.css">
    </head>
    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+      <div id="heading">
+        <div id="name">Dan Zadorozhnyy</div>
+        <div id="occupation">&lt Web Developer &gt</div>
+      </div>
       <div class="navbar navbar-inverse navbar-fixed-left">
-         <a class="navbar-brand" href="#">Dan Zadorozhnyy</a>
+         <a class="navbar-brand" href="#"></a>
          <div>
             <div class="collapse navbar-collapse" id="myNavbar">
                <ul class="nav navbar-nav">
-                  <li><a href="#section1">About</a></li>
-                  <li><a href="#section2">Employment</a></li>
-                  <li><a href="#section3">Education</a></li>
+                  <li><a href="#about">About</a></li>
+                  <li><a href="#projects">Projects</a></li>
+                  <li><a href="#employment">Employment</a></li>
+                  <li><a href="#education">Education</a></li>
                </ul>
             </div>
+            <a href="https://github.com/danZzyy" id="github" class="btn btn-block btn-social btn-md btn-github">
+              <span class="fa fa-github fa-lg"></span> Find me on GitHub
+            </a>
          </div>
       </div>
-      <div id="section1" class="container-fluid">
-         <h1>ABOUT</h1>
-         <p>My name is Daniil Zadorozhnyy (I go by Dan) and I am a Senior Computer Science Undergraduate at University of Maryland and an aspiring web developer. My interests include front-end development and design, usability, interactivity, creative coding, geospatial data, and data visualization.</p>
-         <p>I am proficient in Javascript, HTML, and CSS, as well as Python and Java.</p>
+      <div id="filler"></div>
+      <div id="about" class="container-fluid cat">
+         <h2>ABOUT</h2>
+         <p>My name is Daniil Zadorozhnyy (I go by Dan) and I am a Senior Computer Science Undergraduate at University of Maryland and an aspiring web developer.</p>
+            <strong>Interests:</strong>
+            <ul>
+              <li>Front-End & Full Stack Web Development</li>
+              <li>UX Engineering</li>
+              <li>GIS</li>
+              <li>Design</li>
+              <li>Creative Coding</li>
+            </ul>
+            <strong>Languages & Technologies:</strong>
+            <ul>
+              <li>Javascript, including Node.js, Express, AngularJS, libraries such as JQuery, D3, and Leaflet, as well as HTML/CSS</li>
+              <li>Java using object-oriented programming and design principles</li>
+              <li>Python, including web frameworks such as Django and Flask, as well as Geospatial libraries</li>
+              <li>PHP</li>
+              <li>C/C++</li>
+              <li>Ruby, including Ruby on Rails</li>
+              <li>Processing and p5.js for creative coding</li>
+              <li>Database systems including PostgreSQL, MySQL, and MongoDB</li>
+              <li>GIS Software including ArcMap, PCI Geomatica, and PostGIS</li>
+            </ul>
       </div>
-      <div id="section2" class="container-fluid">
+      <div id="projects" class="container-fluid cat">
+        <hr>
+        <h2>PROJECTS</h2>
+        <span id="proj-images">
+          <img class="proj-img" src="sidewalk_icon.jpg" alt="">
+          <img class="proj-img" src="goodfresh1.PNG"  alt="">
+          <img class="proj-img" src="webgis.PNG" alt="">
+        </span>
+      </div>
+      <div id="employment" class="container-fluid cat">
          <hr>
-         <h1>EMPLOYMENT</h1>
+         <h2>EMPLOYMENT</h2>
          <article>
             <h3>University of Maryland Computer Science Department</h3>
             <h4>Teaching Assistant</h4>
@@ -94,31 +95,51 @@
 
          </article>
       </div>
-      <div id="section3" class="container-fluid">
+      <div id="education" class="container-fluid cat">
          <hr>
-         <h1>EDUCATION</h1>
+         <h2>EDUCATION</h2>
          <h3>University of Maryland, College Park</h3>
          <h4>BS in Computer Science with minor in Geographic Information Systems</h4>
          <h4>Anticipated Graduation: May 2017</h4>
          <br>
          <h4>COURSEWORK</h4>
          <article>
-            <h4>CMSC 424 - Databases</h4>
-            <p> -</p>
+            <h4>CMSC 434 - Human-Computer Interaction</h4>
+            <p> Assess usability by quantitative and qualitative methods. Conduct task analyses, usability tests, expert reviews, and continuing assessments of working products by interviews, surveys, and logging. Apply design processes and guidelines to develop professional quality user interfaces. Build low-fidelity paper mockups, and a high-fidelity prototype using contemporary tools such as graphic editors and a graphical programming environment.</p>
          </article>
          <article>
-            <h4>ARTT 370 - Interactive Digital Media</h4>
-            <p> -</p>
-         </article>
-         <article>
-            <h4>GEOG 476 - Object oriented Programming for GIS</h4>
-            <p> -</p>
+            <h4>CMSC 389K - Full Stack Web Development with Node.js</h4>
+            <p> A comprehensive, practical introduction to modern full-stack web development using JavaScript and Node.js.</p>
          </article>
          <article>
             <h4>CMSC 389N - Web Programming</h4>
-            <p> -</p>
+            <p> Concepts of writing web applications using HTML, CSS, Javascript, PHP, and MySQL</p>
          </article>
-         
+         <article>
+            <h4>CMSC 424 - Databases</h4>
+            <p> Concepts of database design including SQL, Ruby on Rails, transaction management, query optimization, normalization, and data storage</p>
+         </article>
+         <article>
+            <h4>CMSC 414 - Computer and Network Security</h4>
+            <p> An introduction to the topic of security in the context of computer systems and networks. Identify, analyze, and solve network-related security problems in computer systems. Fundamentals of number theory, authentication, and encryption technologies, as well as the practical problems that have to be solved in order to make those technologies workable in a networked environment, particularly in the wide-area Internet environment.</p>
+         </article>
+         <article>
+            <h4>CMSC 420 - Data Structures</h4>
+            <p> Concepts of database design including SQL, Ruby on Rails, transaction management, query optimization, normalization, and data storage</p>
+         </article>
+         <article>
+            <h4>ARTT 370 - Interactive Digital Media</h4>
+            <p> Creative coding through Processing, a Java-like graphics oriented language. Focus on animation, interactivity, and working with audio and visual inputs.</p>
+         </article>
+         <article>
+            <h4>GEOG 476 - Object oriented Programming for GIS</h4>
+            <p> Using Python to work with geospatial data in an Object Oriented structure. Using various GIS libraries for data manipulation, analysis, and visualization.</p>
+         </article>
+         <article>
+            <h4>GEOG498K - Web GIS</h4>
+            <p> Visualizing, querying, and editing geospatial data in HTML and Javascript using geospatial libraries such as ArcMap API and working with World Bank’s Nighttime Lights data</p>
+         </article>
+
       </div>
    </body>
 </html>
